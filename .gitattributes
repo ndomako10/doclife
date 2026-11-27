@@ -1,0 +1,2 @@
+# Store and check out LF everywhere, whatever the machine's Git settings.
+* text=auto eol=lf

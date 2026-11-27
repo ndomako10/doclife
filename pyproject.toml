@@ -1,0 +1,38 @@
+[project]
+name = "doclife"
+version = "0.1.0.dev0"
+description = "Frontmatter checks for docs in git, with modified dates stamped by a hook and a report of documents due for review"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+# tomllib, for the settings file, arrived in 3.11. No runtime dependencies.
+requires-python = ">=3.11"
+keywords = ["documentation", "frontmatter", "markdown", "pre-commit", "adr"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.urls]
+Source = "https://github.com/ndomako10/doclife"
+Issues = "https://github.com/ndomako10/doclife/issues"
+
+[project.scripts]
+doclife = "doclife.cli:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.ruff.lint]
+extend-select = ["B", "I", "UP"]
