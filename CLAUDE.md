@@ -6,19 +6,20 @@ noted.
 ## What this repo is
 
 A Python package that checks document frontmatter in git repos, stamps
-modified dates and reports documents due for review. Extracted from
-rwk-auto-bot's `tools/docs_check.py`, decided in domako-tech's ADR-009.
-Public on GitHub (`ndomako10/doclife`), released to PyPI.
+modified dates and reports documents due for review. Extracted from a
+checker in one of the owner's private repos. Public on GitHub
+(`ndomako10/doclife`), released to PyPI.
 
 ## Public repo
 
 Everything here, including commit messages, issues and test fixtures, is
-public.
+public. The repo stands on its own: nothing here names the private repos it
+came from or serves, or cites their ADRs, issues or files. The reasoning
+behind the extraction stays in those repos.
 
 - Test fixtures are invented documents. Never copy a real document from
   another repo into a test.
-- Nothing from domako-tech's private or employer list, and no customer or
-  business details from any repo.
+- No private, employer, customer or business details from any repo.
 - Commits use the GitHub noreply address, set in this repo's git config.
   The global git email is personal and must not be used here.
 
