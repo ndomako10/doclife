@@ -29,5 +29,5 @@ repos:
         name: pytest
         entry: ./.venv/Scripts/python.exe -m pytest -q
         language: system
-        files: ^(src/|tests/|pyproject\.toml$|requirements-dev\.(in|txt)$)
+        files: ^(src/|tests/|pyproject\.toml$|requirements-dev\.(in|txt)$|\.pre-commit-config\.yaml$|\.github/workflows/)
         pass_filenames: false

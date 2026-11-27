@@ -1,8 +1,9 @@
 # Update pull requests, one per ecosystem each month. The cooldown lets a bad
 # release be noticed and pulled before it's proposed here.
 #
-# Not covered, so update by hand: gitleaks in ci.yml, which must match the
-# hook's rev in .pre-commit-config.yaml.
+# Not covered, so update by hand: gitleaks in ci.yml. A gitleaks pull request
+# fails until ci.yml has the same version, and a ruff one until the hook and
+# requirements-dev.txt agree (tests/test_tool_versions.py). Combine the two.
 version: 2
 updates:
   - package-ecosystem: github-actions
