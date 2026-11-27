@@ -1,0 +1,46 @@
+# Update pull requests, one per ecosystem each month. The cooldown lets a bad
+# release be noticed and pulled before it's proposed here.
+#
+# Not covered, so update by hand: gitleaks in ci.yml, which must match the
+# hook's rev in .pre-commit-config.yaml.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    cooldown:
+      default-days: 7
+    groups:
+      actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: ci
+      include: scope
+
+  # uv, not pip: requirements-dev.txt is compiled by uv.
+  - package-ecosystem: uv
+    directory: /
+    schedule:
+      interval: monthly
+    cooldown:
+      default-days: 7
+    groups:
+      python:
+        patterns: ["*"]
+    commit-message:
+      prefix: build
+      include: scope
+
+  - package-ecosystem: pre-commit
+    directory: /
+    schedule:
+      interval: monthly
+    cooldown:
+      default-days: 7
+    groups:
+      pre-commit:
+        patterns: ["*"]
+    commit-message:
+      prefix: ci
+      include: scope
