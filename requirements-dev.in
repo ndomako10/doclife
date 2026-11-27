@@ -1,5 +1,5 @@
 # Compiled to requirements-dev.txt; the command is in that file's header.
 pytest==9.2.0
-ruff==0.17.5
+ruff==0.17.6
 # Builds the package.
 setuptools==84.2.1
