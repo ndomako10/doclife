@@ -46,7 +46,9 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install
-        run: python -m pip install --require-hashes --only-binary :all: -r requirements-dev.txt
+        # A block, because ": " in a plain YAML value starts a key.
+        run: |
+          python -m pip install --require-hashes --only-binary :all: -r requirements-dev.txt
       - name: Lint
         run: |
           ruff check .
